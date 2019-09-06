@@ -1,12 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
+/**
+ * Our default flexible button base
+ */
 export default function Button(props: ButtonProps) {
     const {
         isDisabled = false,
         shape = 'default',
         type = 'default',
         size = 'medium',
+        onClick,
         children
     } = props;
 
@@ -60,7 +64,7 @@ export default function Button(props: ButtonProps) {
     );
 
     return (
-        <button className={className} disabled={isDisabled}>
+        <button className={className} disabled={isDisabled} onClick={onClick}>
             {children}
         </button>
     );
@@ -71,5 +75,6 @@ interface ButtonProps {
     size?: 'small' | 'medium' | 'large';
     shape?: 'default' | 'circle' | 'pill';
     isDisabled?: boolean;
+    onClick: () => void;
     children: React.ReactNode;
 }

@@ -3,7 +3,7 @@ Plain buttons and their disabled. Button text should be in title case (all words
 
 ```jsx
 <div>
-    <Button type="default">
+    <Button type="default" onClick={()=>alert('The button was clicked!')}>
         Default
     </Button>
     {' '}
@@ -17,7 +17,7 @@ Plain buttons and their disabled. Button text should be in title case (all words
 </div>
 
 <div>
-    <Button type="default" isDisabled>
+    <Button type="default" isDisabled onClick={()=>alert('The button was clicked!')}>
         Default
     </Button>
     {' '}
