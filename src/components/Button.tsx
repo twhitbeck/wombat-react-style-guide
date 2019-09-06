@@ -24,15 +24,15 @@ export default function Button(props: ButtonProps) {
 
     function sizeClasses(): string {
         return {
-            small: classNames('text-xs', {'px-2': shape !== 'circle'}),
-            medium: classNames('text-base', {'px-5': shape !== 'circle'}),
-            large: classNames('text-lg', {'px-8': shape !== 'circle'}),
+            small: classNames('text-xs leading-tight', {'px-2': shape !== 'circle'}),
+            medium: classNames('text-base leading-normal', {'px-5': shape !== 'circle'}),
+            large: classNames('text-lg leading-loose', {'px-8': shape !== 'circle'}),
         }[size];
     }
 
     function shapeClasses(): string {
         return {
-            default: '',
+            default: 'rounded-sm',
             circle: classNames(
                 'rounded-100',
                 {
