@@ -7,6 +7,9 @@ import classNames from 'classnames';
 export default function Button(props: ButtonProps) {
     const {
         isDisabled = false,
+        isBlock = false,
+        isBorder = false,
+        isBorderless = false,
         shape = 'default',
         type = 'default',
         size = 'medium',
@@ -15,52 +18,29 @@ export default function Button(props: ButtonProps) {
     } = props;
 
     function typeClasses(): string {
-        return {
-            default: 'text-theme-primary border-theme-primary',
-            primary: 'bg-theme-primary text-white',
-            danger: 'bg-error text-white'
-        }[type];
+        return type === 'default' ? '' : `btn-${type}`;
     }
 
     function sizeClasses(): string {
         return {
-            small: classNames('text-xs leading-tight', {'px-2': shape !== 'circle'}),
-            medium: classNames('text-base leading-normal', {'px-5': shape !== 'circle'}),
-            large: classNames('text-lg leading-loose', {'px-8': shape !== 'circle'}),
+            small: 'btn-s',
+            medium: 'btn-m',
+            large: 'btn-l',
         }[size];
     }
 
     function shapeClasses(): string {
-        return {
-            default: 'rounded-sm',
-            circle: classNames(
-                'rounded-100',
-                {
-                    small: 'h-6 w-6',
-                    medium: 'h-8 w-8',
-                    large: 'h-10 w-10'
-                }[size]
-            ),
-            pill: 'rounded-full'
-        }[shape];
-    }
-
-    function disabledClasses(): string {
-        return classNames(
-            'disabled:border-gray-300 disabled:bg-gray-100 disabled:text-gray-300',
-            {
-                'hover:shadow-md': !isDisabled,
-                'cursor-default': isDisabled
-            }
-        );
+        return type === 'default' ? '' : `btn-${shape}`;
     }
 
     const className = classNames(
-        'border border-solid',
+        'btn',
+        {'btn-block': isBlock},
+        {'btn-border': isBorder},
+        {'btn-borderless': isBorderless},
         typeClasses(),
         sizeClasses(),
-        shapeClasses(),
-        disabledClasses()
+        shapeClasses()
     );
 
     return (
@@ -71,10 +51,13 @@ export default function Button(props: ButtonProps) {
 }
 
 interface ButtonProps {
-    type?: 'default' | 'primary' | 'danger';
+    type?: 'default' | 'primary' | 'link' | 'danger' | 'success' | 'warning' | 'info';
     size?: 'small' | 'medium' | 'large';
-    shape?: 'default' | 'circle' | 'pill';
+    shape?: 'default' | 'circle' | 'pill' | 'square';
+    isBlock?:boolean;
     isDisabled?: boolean;
+    isBorder?:boolean;
+    isBorderless?:boolean;
     onClick: () => void;
     children: React.ReactNode;
 }

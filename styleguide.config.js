@@ -7,6 +7,6 @@ module.exports = {
 	components: 'src/components/**/*.tsx',
 	propsParser: rdt.withDefaultConfig([parserOptions]).parse,
 	require: [
-		path.join( __dirname, 'src/assets/css/tailwind.css' )
+		path.join( __dirname, 'src/assets/css/main.scss' )
 	]
 };
