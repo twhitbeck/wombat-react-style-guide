@@ -17,7 +17,11 @@ export default function Alert({
   visible = true,
   children
 }: AlertProps) {
-  const className = classNames("wombat-alert", `alert-${style}`, {
+  const className = classNames("wombat-alert", {
+    "alert-info": style === "info",
+    "alert-warning": style === "warning",
+    "alert-success": style === "success",
+    "alert-error": style === "error",
     "is-visible": visible,
     "alert-floating": floating,
     "alert-text-only": textOnly
