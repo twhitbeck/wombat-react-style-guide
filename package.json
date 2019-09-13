@@ -42,6 +42,7 @@
 	"devDependencies": {
 		"execa": "^2.0.4",
 		"node-sass": "^4.12.0",
+		"prettier": "^1.18.2",
 		"react-docgen-typescript": "^1.14.0",
 		"wombat-style-guide": "git+ssh://git@github.com/wombatsecurity/wombat-style-guide.git"
 	}

@@ -1,5 +1,5 @@
-
 ### Plain Buttons
+
 Plain buttons and their disabled. Button text should be in title case (all words are capitalized).
 
 ```jsx
@@ -36,6 +36,7 @@ Plain buttons and their disabled. Button text should be in title case (all words
 ```
 
 ### Button Sizes
+
 Different bootstrap-sized buttons and their disabled states.
 
 ```jsx
@@ -128,7 +129,9 @@ Different bootstrap-sized buttons and their disabled states.
 ```
 
 ### Button Border Styles
+
 These buttons have no fill they only have a border to define their hit target.
+
 ```jsx
 <div className="row">
     <div className="col s12 l6">
@@ -211,8 +214,8 @@ These buttons have no fill they only have a border to define their hit target.
 </div>
 ```
 
-
 ### Button Shapes
+
 Button icons only and their disabled states, not to be confused with any other icon + text combo. Note icons without text should include the aria-label attribute. Icon only buttons should be used primarily for mobile situations.
 
 ```jsx
@@ -230,7 +233,7 @@ Button icons only and their disabled states, not to be confused with any other i
             ✓
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="default" size="small" shape="default" isDisabled>
            ✓
@@ -260,7 +263,7 @@ Button icons only and their disabled states, not to be confused with any other i
             ✓
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="primary" size="small" shape="circle" isDisabled>
            ✓
@@ -290,7 +293,7 @@ Button icons only and their disabled states, not to be confused with any other i
             ✓
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="danger" size="small" shape="pill" isDisabled>
            ✓
@@ -320,7 +323,7 @@ Button icons only and their disabled states, not to be confused with any other i
             ✓
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="link" size="small" shape="pill" isDisabled>
            ✓
@@ -338,6 +341,7 @@ Button icons only and their disabled states, not to be confused with any other i
 ```
 
 ### Button Blocks
+
 display: block buttons that stack on top of each other, rather than next to each other and their disabled states. Pill buttons should only be used on end user facing products.
 
 ```jsx
@@ -355,7 +359,7 @@ display: block buttons that stack on top of each other, rather than next to each
            Large
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button size="small" isBlock isDisabled>
            Small
@@ -385,7 +389,7 @@ display: block buttons that stack on top of each other, rather than next to each
            Large
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="primary" size="small" isBlock isDisabled>
            Small
@@ -415,7 +419,7 @@ display: block buttons that stack on top of each other, rather than next to each
            Large
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button shape="pill" size="small" isBlock isDisabled>
            Small
@@ -445,7 +449,7 @@ display: block buttons that stack on top of each other, rather than next to each
            Large
         </Button>
     </div>
-        
+
     <div className="col s12 l6">
         <Button type="link" size="small" isBlock isDisabled>
            Small

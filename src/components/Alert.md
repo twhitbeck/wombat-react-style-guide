@@ -1,4 +1,5 @@
 ### Alerts
+
 Alerts can be of various styles.
 
 ```jsx
@@ -22,6 +23,7 @@ Alerts can be of various styles.
 ```
 
 #### Floating alerts
+
 Alerts may need to float on top of the page.
 
 ```jsx
@@ -31,6 +33,7 @@ Alerts may need to float on top of the page.
 ```
 
 #### Text alerts
+
 Some alerts may need to appear within a section on the page. You can set these using textOnly=true. You can set the your own custom text to use the alert color by using the class alert-text.
 
 ```jsx
