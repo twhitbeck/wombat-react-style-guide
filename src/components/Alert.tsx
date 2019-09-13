@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 type AlertProps = React.PropsWithChildren<{
-  style: "info" | "warning" | "success" | "error";
+  status: "info" | "warning" | "success" | "error";
   floating?: boolean;
   textOnly?: boolean;
   dismissable?: boolean;
@@ -10,7 +10,7 @@ type AlertProps = React.PropsWithChildren<{
 }>;
 
 export default function Alert({
-  style,
+  status,
   floating,
   textOnly,
   dismissable,
@@ -18,10 +18,10 @@ export default function Alert({
   children
 }: AlertProps) {
   const className = classNames("wombat-alert", {
-    "alert-info": style === "info",
-    "alert-warning": style === "warning",
-    "alert-success": style === "success",
-    "alert-error": style === "error",
+    "alert-info": status === "info",
+    "alert-warning": status === "warning",
+    "alert-success": status === "success",
+    "alert-error": status === "error",
     "is-visible": visible,
     "alert-floating": floating,
     "alert-text-only": textOnly
